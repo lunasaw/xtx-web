@@ -12,9 +12,16 @@
 export default {
   props: {
     image: {
-      src: require('@/assets/images/hot2.png'),
-      alt: "Image 1",
-      link: "#"
+      type: Object,
+      default: () => ({
+        src: require('@/assets/images/hot2.png'),
+        alt: "Image 1",
+        link: "#"
+      }),
+      required: true,
+      validator: (image) => {
+        return image.src;
+      }
     },
   },
   data () {
