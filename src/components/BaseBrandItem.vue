@@ -1,37 +1,33 @@
 <template>
   <div>
-    <li class="base-brand-item">
-      <a href="#">
-        <img src="@/assets/images/hot1.png" alt="" />
+    <li>
+      <a :href="image.link" @click="handClick">
+        <img :src="image.src" :alt="image.fileName" />
       </a>
     </li>
-    <!-- <li>
-              <a href="#">
-                <img src="@/assets/images/hot2.png" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="@/assets/images/hot3.png" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="@/assets/images/hot4.png" alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="@/assets/images/hot5.png" alt="" />
-              </a>
-            </li> -->
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    image: {
+      src: require('@/assets/images/hot2.png'),
+      alt: "Image 1",
+      link: "#"
+    },
+  },
+  data () {
+    return {
+    };
+  },
 
-}
+  methods: {
+    handClick () {
+      this.$emit('clickItem', this.image);
+    }
+  }
+};
 </script>
 
 <style scoped>

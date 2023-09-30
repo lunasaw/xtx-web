@@ -13,22 +13,17 @@
         </div>
       </div>
       <div class="bd">
-        <ul>
-          <base-brand-item></base-brand-item>
-          <base-brand-item></base-brand-item>
-          <base-brand-item></base-brand-item>
-          <base-brand-item></base-brand-item>
-        </ul>
+        <XtxHotBrandList></XtxHotBrandList>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import BaseBrandItem from '@/components/BaseBrandItem.vue'
+import XtxHotBrandList from '@/components/XtxHotBrandList.vue'
 export default {
   components: {
-    BaseBrandItem
+    XtxHotBrandList
   }
 
 }
